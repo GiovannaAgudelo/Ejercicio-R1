@@ -11,7 +11,7 @@ st.title("ðŸ“Š ProyecciÃ³n de Ventas con Variables MacroeconÃ³micas")
 
 # ---------- utilidades ----------
 def normalize_cols(cols):
-    rep = str.maketrans("Ã¡Ã©Ã¬Ã³ÃºÃÃ‰ÃÃ“Ãš", "aeiouAEIOU")
+    rep = str.maketrans("Ã¡Ã©Ã­Ã³ÃºÃÃ‰ÃÃ“Ãš", "aeiouAEIOU")
     out = []
     for c in cols:
         c2 = str(c).translate(rep)
@@ -75,7 +75,7 @@ else:
     df = raw.copy()
 
 df.columns = normalize_cols(df.columns)
-# Si no hay columna AÃ±o, intenta inferirla del Ã¬ndice
+# Si no hay columna AÃ±o, intenta inferirla del Ã­ndice
 if "AÃ±o" not in df.columns and "Ano" not in df.columns and "Year" not in df.columns:
     df.insert(0, "AÃ±o", range(1, len(df)+1))
 
@@ -160,4 +160,3 @@ st.download_button(
     file_name="Resultados_Proyecciones.xlsx",
     mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
 )
-
