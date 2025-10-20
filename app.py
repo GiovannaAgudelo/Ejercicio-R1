@@ -11,7 +11,7 @@ st.title("ðŸ“Š ProyecciÃ³n de Ventas con Variables MacroeconÃ³micas")
 
 # ---------- utilidades ----------
 def normalize_cols(cols):
-    rep = str.maketrans("", "aeiouAEIOU")
+    rep = str.maketrans("áéíóúÁÉÍÓÚ", "aeiouAEIOU")
     out = []
     for c in cols:
         c2 = str(c).translate(rep)
